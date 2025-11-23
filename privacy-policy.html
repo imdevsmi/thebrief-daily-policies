@@ -3,98 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - The Brief: Daily</title>
   <style>
-    
+    :root {
+      --primary-color: #2563eb; /* Modern Mavi */
+      --text-color: #334155;
+      --heading-color: #1e293b;
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7f8;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
       margin: 0;
       padding: 0;
+      -webkit-font-smoothing: antialiased;
     }
-    
+
     .container {
-      max-width: 900px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 60px auto;
+      background: var(--card-bg);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
     }
 
     h1 {
-      color: #0d6efd;
-      text-align: center;
-      margin-bottom: 30px;
+      color: var(--heading-color);
+      font-size: 2.2rem;
+      margin: 0;
+      letter-spacing: -0.025em;
+    }
+
+    .app-name {
+      color: var(--primary-color);
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 10px;
+      display: block;
     }
 
     h2 {
-      color: #0a58ca;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 5px;
+      color: var(--heading-color);
+      font-size: 1.25rem;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
-    p {
+    p, li {
       margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     a {
-      color: #0d6efd;
+      color: var(--primary-color);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
     }
 
     a:hover {
+      color: #1d4ed8;
       text-decoration: underline;
     }
 
+    .highlight-box {
+      background-color: #eff6ff;
+      border-left: 4px solid var(--primary-color);
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .container {
-        padding: 20px;
-        margin: 20px;
+        margin: 0;
+        border-radius: 0;
+        padding: 30px 20px;
+        box-shadow: none;
       }
       h1 {
-        font-size: 24px;
-      }
-      h2 {
-        font-size: 18px;
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Privacy Policy<br>The Brief: Daily</h1>
-    <p><strong>Effective Date:</strong> October 20, 2025</p>
 
-    <p>The Brief: Daily ("we", "our", "us") provides users with the latest news, weather, and finance information. We value your privacy and are committed to protecting it.</p>
+  <div class="container">
+    <header>
+      <h1>Privacy Policy for <span class="app-name">The Brief: Daily</span></h1>
+      <span class="date">Last Updated: November 24, 2025</span>
+    </header>
+
+    <p>Welcome to <strong>The Brief: Daily</strong> ("we", "our", or "us"). This Privacy Policy explains how we handle your information when you use our mobile application designed to provide news, weather updates, and financial data.</p>
+    
+    <p>By using our Service, you agree to the collection and use of information in accordance with this policy.</p>
 
     <h2>1. Information We Collect</h2>
-    <p>We do not collect, store, or share any personal information from users. The app only requests permission to send notifications.</p>
-
-    <h2>2. Third-Party Services</h2>
-    <p>We use Google AdMob to display advertisements. AdMob may collect certain data as described in Google’s Privacy Policy:</p>
-    <p><a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-
-    <h2>3. Notifications</h2>
-    <p>The app may request permission to send notifications. You can disable notifications at any time in your device settings.</p>
-
-    <h2>4. Children’s Privacy</h2>
-    <p>The Brief: Daily is suitable for general audiences and does not knowingly collect data from children under 13 years old.</p>
-
-    <h2>5. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy periodically. Any changes will be posted within the app or on this page.</p>
-
-    <h2>6. Contact Us</h2>
-    <p><strong>Email:</strong> gundogannsami@gmail.com</p>
+    <p>We prioritize your privacy. Generally, we do not knowingly collect directly identifiable personal information (such as your name, address, or phone number).</p>
     
-    <h2>7. Third-Party Data Sources</h2>
-    <p>The app retrieves news, weather, and financial data from third-party APIs solely to display information in the app’s native interface. These data do not include personal user information and are not shared with any other service.</p>
-    
-    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+    <div class="highlight-box">
+      <strong>Automatically Collected Data:</strong> <br>
+      When you use the app, certain non-personal data may be collected automatically by third-party services to ensure the app functions correctly and to serve advertisements. This may include your device type, operating system version, IP address, and usage statistics.
+    </div>
+
+    <h2>2. Third-Party Services & APIs</h2>
+    <p>To provide you with up-to-date content, "The Brief: Daily" utilizes third-party services. These entities may collect information used to identify your device:</p>
+    <ul>
+      <li><strong>Google AdMob:</strong> We use AdMob to display advertisements. Google may use cookies or unique device identifiers for personalized advertising.</li>
+      <li><strong>News, Finance & Weather APIs:</strong> The app fetches data from external APIs to display content. While these services receive requests from your device to deliver data (e.g., weather for your general area), we do not share your personal identity with them.</li>
+    </ul>
+    <p>You can read more about Google's privacy practices here: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
+
+    <h2>3. Permissions</h2>
+    <p>To provide specific features, the app may request the following permissions:</p>
+    <ul>
+      <li><strong>Notifications:</strong> To send you alerts about breaking news or daily briefings. You can opt-out anytime via device settings.</li>
+      <li><strong>Location (Optional):</strong> If applicable, the app may request access to your location solely to provide local weather updates. This data is processed momentarily and is not stored on our servers.</li>
+    </ul>
+
+    <h2>4. Data Security</h2>
+    <p>We value your trust in providing us your information. While no method of transmission over the internet is 100% secure, we strive to use commercially acceptable means to protect your device data and ensure our third-party partners maintain high security standards.</p>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we will immediately delete this from our servers.</p>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+    <p><strong>Email:</strong> <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
+
+    <footer>
+      &copy; 2025 The Brief: Daily. All rights reserved.
+    </footer>
   </div>
+
 </body>
 </html>
