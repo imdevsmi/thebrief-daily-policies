@@ -3,96 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use - The Brief: Daily</title>
   <style>
-    
+    :root {
+      --primary-color: #2563eb;
+      --text-color: #334155;
+      --heading-color: #1e293b;
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --warning-bg: #fff7ed;
+      --warning-border: #f97316;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7f8;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
       margin: 0;
       padding: 0;
+      -webkit-font-smoothing: antialiased;
     }
-    
+
     .container {
-      max-width: 900px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 60px auto;
+      background: var(--card-bg);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
     }
 
     h1 {
-      color: #0d6efd;
-      text-align: center;
-      margin-bottom: 30px;
+      color: var(--heading-color);
+      font-size: 2.2rem;
+      margin: 0;
+      letter-spacing: -0.025em;
+    }
+
+    .app-name {
+      color: var(--primary-color);
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 10px;
+      display: block;
     }
 
     h2 {
-      color: #0a58ca;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 5px;
+      color: var(--heading-color);
+      font-size: 1.25rem;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
-    p {
+    p, li {
       margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     a {
-      color: #0d6efd;
+      color: var(--primary-color);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
     }
 
     a:hover {
+      color: #1d4ed8;
       text-decoration: underline;
     }
 
+    /* Özel Uyarı Kutusu (Finansal Veriler İçin) */
+    .disclaimer-box {
+      background-color: var(--warning-bg);
+      border-left: 4px solid var(--warning-border);
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin: 25px 0;
+      font-size: 0.95rem;
+      color: #7c2d12;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .container {
-        padding: 20px;
-        margin: 20px;
+        margin: 0;
+        border-radius: 0;
+        padding: 30px 20px;
+        box-shadow: none;
       }
       h1 {
-        font-size: 24px;
-      }
-      h2 {
-        font-size: 18px;
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-   <h1>Terms of Use<br>The Brief: Daily</h1>
-    <p><strong>Effective Date:</strong> October 20, 2025</p>
+    <header>
+      <h1>Terms of Use for <span class="app-name">The Brief: Daily</span></h1>
+      <span class="date">Effective Date: November 24, 2025</span>
+    </header>
 
-    <p>By downloading or using The Brief: Daily, you agree to be bound by these Terms of Use.</p>
+    <p>Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the <strong>The Brief: Daily</strong> mobile application (the "Service") operated by us.</p>
+    
+    <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. By accessing or using the Service, you agree to be bound by these Terms.</p>
 
-    <h2>1. Service Description</h2>
-    <p>The Brief: Daily provides users with access to news, weather updates, and financial information. The app is provided “as is,” without any warranties regarding accuracy or availability.</p>
+    <h2>1. Description of Service</h2>
+    <p>The Brief: Daily is an information aggregator designed to provide users with streamlined access to news headlines, weather forecasts, and financial market data provided by third-party sources.</p>
 
-    <h2>2. User Responsibilities</h2>
-    <p>You agree not to misuse the app or interfere with its normal operation. You must comply with all applicable laws while using the app.</p>
+    <h2>2. Content Disclaimer (Important)</h2>
+    <p>The content displayed in the app, including news articles, stock prices, and weather forecasts, is fetched from external third-party APIs.</p>
+    
+    <div class="disclaimer-box">
+      <strong>Financial & News Disclaimer:</strong><br>
+      The information provided by this app is for general informational purposes only. We are not financial advisors. No content in this app should be construed as financial, investment, or legal advice. We do not guarantee the accuracy, completeness, or timeliness of stock market data or news stories. You should consult with a professional before making any investment decisions.
+    </div>
 
-    <h2>3. Intellectual Property</h2>
-    <p>All content and materials in The Brief: Daily are owned by us or our content providers and are protected by copyright laws.</p>
+    <h2>3. User Responsibilities</h2>
+    <p>You agree to use the app only for lawful purposes. You are prohibited from:</p>
+    <ul>
+      <li>Attempting to reverse engineer or tamper with the app's source code.</li>
+      <li>Using the app to distribute malware or harmful content.</li>
+      <li>Scraping or collecting data from the app automated means.</li>
+    </ul>
 
-    <h2>4. Third-Party Services</h2>
-    <p>The app uses Google AdMob to display advertisements. By using the app, you also agree to AdMob’s privacy and service terms.</p>
+    <h2>4. Intellectual Property</h2>
+    <p>The design, code, and original content of "The Brief: Daily" are owned by us. However, the <strong>news articles, headlines, and third-party data</strong> displayed within the app remain the intellectual property of their respective owners/publishers. We do not claim ownership of external news content.</p>
 
-    <h2>5. Limitation of Liability</h2>
-    <p>We are not responsible for any damages arising from the use or inability to use the app.</p>
+    <h2>5. Third-Party Services & Ads</h2>
+    <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by us.</p>
+    <ul>
+      <li><strong>Google AdMob:</strong> The app is supported by advertisements served by Google AdMob. By using the app, you acknowledge that ads will be displayed.</li>
+      <li><strong>External Links:</strong> If you click on a news story, you may be directed to the publisher's website. We assume no responsibility for the content, privacy policies, or practices of any third-party sites.</li>
+    </ul>
 
-    <h2>6. Changes to These Terms</h2>
-    <p>We may update these Terms of Use from time to time. Updated terms will be posted within the app or on this page.</p>
+    <h2>6. Limitation of Liability</h2>
+    <p>In no event shall "The Brief: Daily", nor its developers, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service or inability to use the service.</p>
+    <p>The service is provided on an "AS IS" and "AS AVAILABLE" basis.</p>
 
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions regarding these Terms, please contact us at:</p>
-    <p><strong>Email:</strong> gundogannsami@gmail.com</p>
+    <h2>7. Changes to Terms</h2>
+    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us.</p>
+    <p><strong>Email:</strong> <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
+
+    <footer>
+      &copy; 2025 The Brief: Daily. All rights reserved.
+    </footer>
   </div>
+
 </body>
 </html>
