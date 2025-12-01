@@ -1,181 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - The Brief: Daily</title>
-  <style>
-    :root {
-      --primary-color: #2563eb;
-      --text-color: #334155;
-      --heading-color: #1e293b;
-      --bg-color: #f1f5f9;
-      --card-bg: #ffffff;
-      --border-color: #e2e8f0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - The Brief: Daily</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #334155;
+            --heading-color: #1e293b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 60px auto;
-      background: var(--card-bg);
-      padding: 50px;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-left: 5px;
+            transition: 0.3s;
+        }
+        .lang-btn:hover { background-color: #e6f0ff; }
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border-color);
-    }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-    h1 {
-      color: var(--heading-color);
-      font-size: 2.2rem;
-      margin: 0;
-      letter-spacing: -0.025em;
-    }
+        h1 { color: var(--heading-color); margin: 0; font-size: 2rem; }
+        .date { font-size: 0.9rem; color: #64748b; margin-top: 10px; display: block; }
+        
+        h2 { color: var(--heading-color); margin-top: 30px; font-size: 1.4rem; border-left: 4px solid var(--primary-color); padding-left: 10px; }
+        h3 { color: var(--heading-color); margin-top: 20px; font-size: 1.1rem; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
 
-    .app-name {
-      color: var(--primary-color);
-    }
+        .highlight-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
 
-    .date {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-top: 10px;
-      display: block;
-    }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
 
-    h2 {
-      color: var(--heading-color);
-      font-size: 1.25rem;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p, li {
-      margin-bottom: 15px;
-      font-size: 1rem;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: #1d4ed8;
-      text-decoration: underline;
-    }
-
-    .highlight-box {
-      background-color: #eff6ff;
-      border-left: 4px solid var(--primary-color);
-      padding: 15px;
-      border-radius: 0 8px 8px 0;
-      margin: 20px 0;
-      font-size: 0.95rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-color);
-      font-size: 0.9rem;
-      color: #64748b;
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .container {
-        margin: 0;
-        border-radius: 0;
-        padding: 30px 20px;
-        box-shadow: none;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+        .hidden { display: none; }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <h1>Privacy Policy for <span class="app-name">The Brief: Daily</span></h1>
-      <span class="date">Last Updated: November 26, 2025</span>
-    </header>
+    <div class="container">
+        
+        <div class="lang-switch">
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">TR</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
 
-    <p>Welcome to <strong>The Brief: Daily</strong> ("we", "our", or "us"). This Privacy Policy explains how we handle your information when you use our mobile application designed to provide news, weather updates, and financial data.</p>
-    
-    <p>By using our Service, you agree to the collection and use of information in accordance with this policy.</p>
+        <div id="content-en">
+            <header>
+                <h1>Privacy Policy</h1>
+                <p><strong>The Brief: Daily</strong></p>
+                <span class="date">Last Updated: November 28, 2025</span>
+            </header>
 
-    <h2>1. Information We Collect</h2>
-    <p>We prioritize your privacy. We collect information to provide better services to all our users.</p>
-    
-    <div class="highlight-box">
-      <strong>Location Data:</strong> <br>
-      We collect and process information about your actual location (using GPS, Wi-Fi, or network signals). This data is used specifically to provide you with local weather forecasts and location-based news updates relevant to your current area.
+            <p>Welcome to <strong>The Brief: Daily</strong>. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+
+            <h2>1. Information We Collect</h2>
+            
+            <div class="highlight-box">
+                <strong>📍 Location Data (CoreLocation):</strong><br>
+                We request access to your location data (GPS coordinates) <strong>solely</strong> to provide accurate, hyper-local weather forecasts via our Weather Dashboard. This data is processed transiently and is not stored on our servers or linked to your personal identity.
+            </div>
+
+            <h3>1.1 Device & Usage Data</h3>
+            <p>We may collect non-personal information about your device, such as the model, operating system version, unique device identifiers (Advertising ID), and usage statistics (e.g., app crashes via Firebase Crashlytics) to improve app stability and performance.</p>
+
+            <h2>2. Third-Party Services</h2>
+            <p>We utilize trusted third-party services to deliver content, notifications, and advertisements. These services may collect information used to identify your device:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> Uses device identifiers (IDFA) to serve personalized advertisements relevant to your interests.</li>
+                <li><strong>Firebase (Google):</strong> Used for delivering Push Notifications and monitoring app stability (Crashlytics).</li>
+                <li><strong>WeatherAPI & GNews.io & MetalPriceAPI & FrankfurterAPI:</strong> Used to fetch real-time weather, news, and financial data.</li>
+            </ul>
+
+            <h2>3. Local Storage (Offline Mode)</h2>
+            <p>To provide functionality without an internet connection (Offline Mode), the app stores certain data locally on your device (using UserDefaults and Core Data). This includes:</p>
+            <ul>
+                <li>Your "Favorites" list of news articles.</li>
+                <li>Cached weather and market data for quick access.</li>
+            </ul>
+            <p>This data remains on your device and is not uploaded to our servers.</p>
+
+            <h2>4. Your Permissions</h2>
+            <ul>
+                <li><strong>Location:</strong> Required for the Weather feature. You can enable or disable this at any time in your device settings.</li>
+                <li><strong>Notifications:</strong> Required to receive breaking news alerts. You can manage this in the app Settings.</li>
+                <li><strong>Tracking (ATT):</strong> We ask for permission to track your activity across other companies' apps and websites for advertising purposes. You can decline this permission.</li>
+            </ul>
+
+            <h2>5. Data Security</h2>
+            <p>We do not require you to create an account or provide personal details like your name or email address to use the app. All communication between the app and third-party APIs is encrypted via HTTPS.</p>
+
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p>📧 Email: <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
+        </div>
+
+        <div id="content-tr" class="hidden">
+            <header>
+                <h1>Gizlilik Politikası</h1>
+                <p><strong>The Brief: Daily</strong></p>
+                <span class="date">Son Güncelleme: 28 Kasım 2025</span>
+            </header>
+
+            <p><strong>The Brief: Daily</strong> uygulamasına hoş geldiniz. Gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz. Bu gizlilik politikası, mobil uygulamamızı kullandığınızda bilgilerinizi nasıl topladığımızı ve kullandığımızı açıklar.</p>
+
+            <h2>1. Topladığımız Bilgiler</h2>
+            
+            <div class="highlight-box">
+                <strong>📍 Konum Verileri (CoreLocation):</strong><br>
+                Hava Durumu Paneli aracılığıyla size kesin ve yerel hava durumu tahminleri sunmak için <strong>yalnızca</strong> bu amaçla konum verilerinize (GPS koordinatları) erişim istiyoruz. Bu veriler anlık olarak işlenir, sunucularımızda saklanmaz ve kimliğinizle ilişkilendirilmez.
+            </div>
+
+            <h3>1.1 Cihaz ve Kullanım Verileri</h3>
+            <p>Uygulama kararlılığını artırmak için cihaz modeli, işletim sistemi sürümü, benzersiz cihaz tanımlayıcıları (Reklam Kimliği) ve kullanım istatistikleri (Firebase Crashlytics aracılığıyla uygulama çökmeleri gibi) hakkında kişisel olmayan bilgiler toplayabiliriz.</p>
+
+            <h2>2. Üçüncü Taraf Hizmetleri</h2>
+            <p>İçerik, bildirim ve reklam sunmak için güvenilir üçüncü taraf hizmetlerini kullanıyoruz. Bu hizmetler cihazınızı tanımlamak için bilgi toplayabilir:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> İlgi alanlarınıza uygun kişiselleştirilmiş reklamlar sunmak için cihaz tanımlayıcılarını (IDFA) kullanır.</li>
+                <li><strong>Firebase (Google):</strong> Anlık Bildirimleri (Push Notifications) iletmek ve uygulama hatalarını izlemek için kullanılır.</li>
+                <li><strong>WeatherAPI & GNews.io & MetalPriceAPI & FrankfurterAPI:</strong> Gerçek zamanlı hava durumu, haber ve finans verilerini çekmek için kullanılır.</li>
+            </ul>
+
+            <h2>3. Yerel Depolama (Çevrimdışı Mod)</h2>
+            <p>İnternet bağlantısı olmadan da çalışabilmek (Çevrimdışı Mod) için uygulama, belirli verileri cihazınızda yerel olarak saklar (UserDefaults ve Core Data kullanarak). Bunlar şunları içerir:</p>
+            <ul>
+                <li>"Favoriler" listenize eklediğiniz haberler.</li>
+                <li>Hızlı erişim için önbelleğe alınan hava durumu ve piyasa verileri.</li>
+            </ul>
+            <p>Bu veriler tamamen cihazınızda kalır ve sunucularımıza yüklenmez.</p>
+
+            <h2>4. İzinleriniz</h2>
+            <ul>
+                <li><strong>Konum:</strong> Hava durumu özelliği için gereklidir. Cihaz ayarlarından istediğiniz zaman açıp kapatabilirsiniz.</li>
+                <li><strong>Bildirimler:</strong> Son dakika haberlerini almak için gereklidir. Ayarlar menüsünden yönetebilirsiniz.</li>
+                <li><strong>Takip İzni (ATT):</strong> Reklam amaçlı olarak sizi diğer uygulamalar ve web sitelerinde takip etmek için izin isteriz. Bu izni reddedebilirsiniz.</li>
+            </ul>
+
+            <h2>5. Veri Güvenliği</h2>
+            <p>Uygulamayı kullanmak için bir hesap oluşturmanıza veya isim, e-posta gibi kişisel bilgilerinizi vermenize gerek yoktur. Uygulama ve üçüncü taraf API'ler arasındaki tüm iletişim HTTPS üzerinden şifrelenir.</p>
+
+            <h2>6. İletişim</h2>
+            <p>Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
+            <p>📧 E-Posta: <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
+        </div>
+
+        <footer>
+            &copy; 2025 The Brief: Daily. All rights reserved.
+        </footer>
     </div>
 
-    <div class="highlight-box" style="margin-top: 20px;">
-      <strong>Automatically Collected Data:</strong> <br>
-      When you use the app, certain non-personal data may be collected automatically by third-party services to ensure the app functions correctly and to serve advertisements. This may include your device type, operating system version, IP address, and usage statistics.
-    </div>
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'tr') {
+                document.getElementById('content-en').classList.add('hidden');
+                document.getElementById('content-tr').classList.remove('hidden');
+                document.getElementById('btn-tr').classList.add('active');
+                document.getElementById('btn-en').classList.remove('active');
+                document.title = "Gizlilik Politikası - The Brief: Daily";
+            } else {
+                document.getElementById('content-tr').classList.add('hidden');
+                document.getElementById('content-en').classList.remove('hidden');
+                document.getElementById('btn-en').classList.add('active');
+                document.getElementById('btn-tr').classList.remove('active');
+                document.title = "Privacy Policy - The Brief: Daily";
+            }
+        }
 
-    <h2>2. Third-Party Services & APIs</h2>
-    <p>To provide you with up-to-date content, "The Brief: Daily" utilizes third-party services. These entities may collect information used to identify your device:</p>
-    <ul>
-      <li><strong>Google AdMob:</strong> We use AdMob to display advertisements. Google may use your device's location and other identifiers to serve personalized ads based on your interests and location.</li>
-      <li><strong>News, Finance & Weather APIs:</strong> The app fetches data from external APIs. Your coordinates (latitude and longitude) are sent to our weather data providers to retrieve the forecast for your specific location.</li>
-    </ul>
-    <p>You can read more about Google's privacy practices here: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
-
-    <h2>3. Permissions</h2>
-    <p>To provide specific features, the app requests the following permissions:</p>
-    <ul>
-  <li><strong>Location (Precise or Approximate):</strong> We require access to your location to display accurate local weather conditions. You can choose to allow this permission "While Using the App". If you deny this permission, location-based features (like local weather) may not function.</li>
-  <li><strong>Notifications:</strong> The app requests your permission to send push notifications for important updates, such as breaking news and daily briefings. You can manage or opt-out of these notifications at any time via your device settings. Notifications are used solely to enhance your app experience and are not linked to your personal identity or shared with third parties for advertising purposes.</li>
-</ul>
-
-    <h2>4. Data Security</h2>
-    <p>We value your trust in providing us your information. While no method of transmission over the internet is 100% secure, we strive to use commercially acceptable means to protect your device data. Location data is processed primarily for fetching real-time content and is not permanently stored on our servers linked to your personal identity.</p>
-
-    <h2>5. Children’s Privacy</h2>
-    <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we will immediately delete this from our servers.</p>
-
-    <h2>6. Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-    <p><strong>Email:</strong> <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
-
-    <footer>
-      &copy; 2025 The Brief: Daily. All rights reserved.
-    </footer>
-  </div>
+        // Otomatik Dil Algılama
+        var userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('tr')) {
+            setLanguage('tr');
+        } else {
+            setLanguage('en');
+        }
+    </script>
 
 </body>
 </html>
