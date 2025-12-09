@@ -1,232 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Scope: AI Analyst</title>
-    <style>
-        :root {
-            --primary-color: #007AFF;
-            --text-color: #334155;
-            --heading-color: #1e293b;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Scope: AI Analyst</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-soft: rgba(37, 99, 235, 0.08);
+      --accent-color: #1d4ed8;
+      --text-color: #334155;
+      --muted-text: #64748b;
+      --heading-color: #0f172a;
+      --bg-color: #0b1220;
+      --card-bg: #0f172a;
+      --card-border: #1e293b;
+      --chip-bg: #1e293b;
+      --warning-bg: #fef3c7;
+      --warning-border: #f97316;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.6);
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .lang-switch {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        .lang-btn {
-            background: none;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 5px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9em;
-            margin-left: 5px;
-            transition: 0.3s;
-        }
-        .lang-btn:hover { background-color: #e6f0ff; }
-        .lang-btn.active {
-            background: var(--primary-color);
-            color: white;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #1d4ed8 0, #020617 55%, #000 100%);
+      color: var(--text-color);
+      line-height: 1.7;
+      margin: 0;
+      padding: 24px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e8f0;
-        }
+    .page-shell {
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-        h1 { color: var(--heading-color); margin: 0; font-size: 2rem; }
-        .date { font-size: 0.9rem; color: #64748b; margin-top: 10px; display: block; }
-        
-        h2 { color: var(--heading-color); margin-top: 30px; font-size: 1.4rem; border-left: 4px solid var(--primary-color); padding-left: 10px; }
-        h3 { color: var(--heading-color); margin-top: 20px; font-size: 1.1rem; }
-        
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        
-        a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
+    /* HEADER / HERO */
 
-        .highlight-box {
-            background-color: #f0f9ff;
-            border: 1px solid #bae6fd;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            font-size: 0.95rem;
-        }
+    .hero {
+      position: relative;
+      padding: 28px 24px 22px 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.98)
+      );
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.14), transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(129, 140, 248, 0.18), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
 
-        .hidden { display: none; }
-    </style>
+    .hero-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    @media (min-width: 720px) {
+      .hero-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .hero-left {
+      max-width: 560px;
+    }
+
+    .app-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      color: var(--muted-text);
+    }
+
+    .app-chip-badge {
+      height: 22px;
+      min-width: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.18);
+      color: #bfdbfe;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      margin: 4px 0 6px;
+      font-size: 1.9rem;
+      letter-spacing: -0.03em;
+      color: #e5e7eb;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--muted-text);
+    }
+
+    .hero-meta-divider {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      z-index: 1;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      backdrop-filter: blur(12px);
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: #e5e7eb;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.18s ease all;
+      white-space: nowrap;
+    }
+
+    .lang-btn:hover {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .lang-btn.active {
+      background: #eff6ff;
+      color: #1e293b;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35);
+    }
+
+    .badge-note {
+      font-size: 0.78rem;
+      color: #cbd5f5;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(129, 140, 248, 0.85);
+    }
+
+    /* MAIN CONTENT */
+
+    .content-shell {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr);
+      gap: 20px;
+    }
+
+    @media (min-width: 880px) {
+      .content-shell {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 0.9fr);
+        align-items: flex-start;
+      }
+    }
+
+    .content-main {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 22px 26px;
+      color: #e5e7eb;
+    }
+
+    .content-main p {
+      margin: 0 0 10px;
+      font-size: 0.96rem;
+      color: #cbd5e1;
+    }
+
+    .content-main h2 {
+      color: #e5e7eb;
+      margin-top: 26px;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .content-main h2::before {
+      content: attr(data-index);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: rgba(37, 99, 235, 0.12);
+      color: #bfdbfe;
+      border: 1px solid rgba(96, 165, 250, 0.75);
+    }
+
+    .content-main h3 {
+      color: #e5e7eb;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 8px 0 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight-box {
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 55%),
+        rgba(15, 23, 42, 0.98);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(59, 130, 246, 0.5);
+      padding: 14px 14px 14px 14px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #e5f3ff;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .highlight-box-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #e0f2fe;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.28);
+    }
+
+    .highlight-box strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.9rem;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+      display: none;
+    }
+
+    @media (min-width: 880px) {
+      .sidebar {
+        display: block;
+      }
+    }
+
+    .sidebar-card {
+      position: sticky;
+      top: 24px;
+      padding: 18px 18px 18px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), transparent 55%),
+        rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      color: #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .sidebar-title {
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #cbd5f5;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sidebar-list li {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(96, 165, 250, 0.9);
+      flex-shrink: 0;
+    }
+
+    .sidebar-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 6px;
+    }
+
+    .sidebar-contact {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.5);
+      font-size: 0.86rem;
+    }
+
+    .sidebar-contact p {
+      margin: 2px 0;
+    }
+
+    /* FOOTER */
+
+    footer {
+      max-width: 960px;
+      margin: 30px auto 0;
+      padding: 16px 4px 4px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* SMALL SCREEN TWEAKS */
+
+    @media (max-width: 480px) {
+      .content-main {
+        padding: 20px 16px 22px;
+      }
+
+      .hero {
+        padding: 22px 18px 18px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <div class="lang-switch">
-            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">TR</button>
-            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
-        </div>
+  <div class="page-shell">
 
-        <div id="content-en">
-            <header>
-                <h1>Privacy Policy</h1>
-                <p><strong>Scope: AI Analyst</strong></p>
-                <span class="date">Last Updated: December 9, 2025</span>
-            </header>
+    <!-- HEADER / HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="app-chip">
+            <div class="app-chip-badge">AI</div>
+            <span>Scope: AI Analyst — Privacy Policy</span>
+          </div>
+          <h1>Privacy Policy</h1>
+          <p class="hero-subtitle" id="hero-subtitle">
+            Learn how we collect, use, and protect your data.
+          </p>
+          <div class="hero-meta" id="hero-meta">
+            <span>Last Updated: December 9, 2025</span>
+            <span class="hero-meta-divider"></span>
+            <span>Applies to the Scope: AI Analyst mobile app</span>
+            <span class="hero-meta-divider"></span>
+            <span class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>No account required • AI-powered insights</span>
+            </span>
+          </div>
+        </div>
 
-            <p>Welcome to <strong>Scope: AI Analyst</strong>. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <div class="hero-right">
+          <div class="lang-switch">
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">TR</button>
+          </div>
+          <div class="badge-note" id="badge-note">
+            <span class="badge-dot"></span>
+            <span>Interface language is selected automatically</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h2>1. Information We Collect</h2>
-            
-            <div class="highlight-box">
-                <strong>📍 Location Data (CoreLocation):</strong><br>
-                We request access to your location data (GPS coordinates) <strong>solely</strong> to provide accurate, hyper-local weather forecasts via our Weather Dashboard and Widget. This data is processed transiently and is not stored on our servers or linked to your personal identity.
-            </div>
-            
-            <div class="highlight-box">
-                <strong>🧠 AI Analysis Content:</strong><br>
-                When you select a news category for AI analysis, the application sends the text content of the news articles within that category to the **Google Gemini API** for immediate processing. This text is processed **transiently** to generate a summary/analysis for you and is **not stored** on our servers, nor is it retained by Google beyond the necessary processing time.
-            </div>
+    <!-- MAIN + SIDEBAR LAYOUT -->
+    <div class="content-shell">
+      <!-- EN CONTENT -->
+      <main class="content-main" id="content-en">
+        <p>
+          Welcome to <strong>Scope: AI Analyst</strong>. We respect your privacy and are committed
+          to protecting your personal data. This privacy policy explains how we collect, use,
+          and safeguard your information when you use our mobile application.
+        </p>
 
-            <h3>1.1 Device & Usage Data</h3>
-            <p>We may collect non-personal information about your device, such as the model, operating system version, unique device identifiers (Advertising ID), and usage statistics (e.g., app crashes via Firebase Crashlytics) to improve app stability and performance.</p>
+        <h2 data-index="1">Information We Collect</h2>
 
-            <h2>2. Third-Party Services</h2>
-            <p>We utilize trusted third-party services to deliver content, notifications, analysis, and advertisements. These services may collect information used to identify your device:</p>
-            <ul>
-                <li><strong>Google AdMob:</strong> Uses device identifiers (IDFA) to serve personalized advertisements relevant to your interests.</li>
-                <li><strong>Firebase (Google):</strong> Used for delivering Push Notifications and monitoring app stability (Crashlytics).</li>
-                <li><strong>Google Gemini API:</strong> Used for the real-time AI analysis of news content selected by the user.</li>
-                <li><strong>WeatherAPI:</strong> Used to fetch real-time weather data based on your location.</li>
-                <li><strong>CurrencyFreaks & FrankfurterAPI:</strong> Used to fetch real-time financial and market data.</li>
-            </ul>
-                    
-            <h2>3. Your Permissions</h2>
-            <ul>
-                <li><strong>Location:</strong> Required for the Weather feature. You can enable or disable this at any time in your device settings.</li>
-                <li><strong>Tracking (ATT):</strong> We ask for permission to track your activity across other companies' apps and websites for advertising purposes. You can decline this permission.</li>
-            </ul>
+        <div class="highlight-box">
+          <div class="highlight-box-icon">📍</div>
+          <div>
+            <strong>Location Data (CoreLocation)</strong>
+            <span>
+              We request access to your location data (GPS coordinates) <strong>solely</strong> to provide
+              accurate, hyper-local weather forecasts via our Weather Dashboard and Widget. This data
+              is processed transiently and is not stored on our servers or linked to your personal identity.
+            </span>
+          </div>
+        </div>
 
-            <h2>4. Data Security</h2>
-            <p>We do not require you to create an account or provide personal details like your name or email address to use the app. All communication between the app and third-party APIs (including the Gemini API) is encrypted via HTTPS.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-icon">🧠</div>
+          <div>
+            <strong>AI Analysis Content</strong>
+            <span>
+              When you select a news category for AI analysis, the application sends the text content
+              of the news articles within that category to the
+              <strong>Google Gemini API</strong> for immediate processing. This text is processed
+              <strong>transiently</strong> to generate a summary/analysis for you and is
+              <strong>not stored</strong> on our servers, nor is it retained by Google beyond the
+              necessary processing time.
+            </span>
+          </div>
+        </div>
 
-            <h2>5. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us:</p>
-            <p>📧 Email: <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
-        </div>
+        <h3>1.1 Device &amp; Usage Data</h3>
+        <p>
+          We may collect non-personal information about your device, such as the model, operating
+          system version, unique device identifiers (Advertising ID), and usage statistics
+          (e.g., app crashes via Firebase Crashlytics) to improve app stability and performance.
+        </p>
 
-        <div id="content-tr" class="hidden">
-            <header>
-                <h1>Gizlilik Politikası</h1>
-                <p><strong>Scope: AI Analyst</strong></p>
-                <span class="date">Son Güncelleme: 9 Aralık 2025</span>
-            </header>
+        <h2 data-index="2">Third-Party Services</h2>
+        <p>
+          We utilize trusted third-party services to deliver content, notifications, analysis,
+          and advertisements. These services may collect information used to identify your device:
+        </p>
+        <ul>
+          <li>
+            <strong>Google AdMob:</strong> Uses device identifiers (IDFA) to serve personalized
+            advertisements relevant to your interests.
+          </li>
+          <li>
+            <strong>Firebase (Google):</strong> Used for delivering Push Notifications and
+            monitoring app stability (Crashlytics).
+          </li>
+          <li>
+            <strong>Google Gemini API:</strong> Used for the real-time AI analysis of news
+            content selected by the user.
+          </li>
+          <li>
+            <strong>WeatherAPI:</strong> Used to fetch real-time weather data based on your location.
+          </li>
+          <li>
+            <strong>CurrencyFreaks &amp; FrankfurterAPI:</strong> Used to fetch real-time
+            financial and market data.
+          </li>
+        </ul>
 
-            <p><strong>Scope: AI Analyst</strong> uygulamasına hoş geldiniz. Gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz. Bu gizlilik politikası, mobil uygulamamızı kullandığınızda bilgilerinizi nasıl topladığımızı ve kullandığımızı açıklar.</p>
+        <h2 data-index="3">Your Permissions</h2>
+        <ul>
+          <li>
+            <strong>Location:</strong> Required for the Weather feature. You can enable or disable
+            this at any time in your device settings.
+          </li>
+          <li>
+            <strong>Tracking (ATT):</strong> We ask for permission to track your activity across
+            other companies' apps and websites for advertising purposes. You can decline this permission.
+          </li>
+        </ul>
 
-            <h2>1. Topladığımız Bilgiler</h2>
-            
-            <div class="highlight-box">
-                <strong>📍 Konum Verileri (CoreLocation):</strong><br>
-                Hava Durumu Paneli ve Widget aracılığıyla size kesin ve yerel hava durumu tahminleri sunmak için <strong>yalnızca</strong> bu amaçla konum verilerinize (GPS koordinatları) erişim istiyoruz. Bu veriler anlık olarak işlenir, sunucularımızda saklanmaz ve kimliğinizle ilişkilendirilmez.
-            </div>
-            
-            <div class="highlight-box">
-                <strong>🧠 Yapay Zeka Analiz İçeriği:</strong><br>
-                Yapay zeka analizi için bir haber kategorisi seçtiğinizde, uygulama o kategorideki haber makalelerinin metin içeriğini anlık işlem için **Google Gemini API**'ye gönderir. Bu metin, sizin için bir özet/analiz oluşturmak amacıyla **anlık olarak işlenir**, sunucularımızda saklanmaz ve Google tarafından da gerekli işlem süresinin ötesinde tutulmaz.
-            </div>
+        <h2 data-index="4">Data Security</h2>
+        <p>
+          We do not require you to create an account or provide personal details like your name
+          or email address to use the app. All communication between the app and third-party APIs
+          (including the Gemini API) is encrypted via HTTPS.
+        </p>
 
-            <h3>1.1 Cihaz ve Kullanım Verileri</h3>
-            <p>Uygulama kararlılığını artırmak için cihaz modeli, işletim sistemi sürümü, benzersiz cihaz tanımlayıcıları (Reklam Kimliği) ve kullanım istatistikleri (Firebase Crashlytics aracılığıyla uygulama çökmeleri gibi) hakkında kişisel olmayan bilgiler toplayabiliriz.</p>
+        <h2 data-index="5">Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p>
+          📧 Email:
+          <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a>
+        </p>
+      </main>
 
-            <h2>2. Üçüncü Taraf Hizmetleri</h2>
-            <p>İçerik, bildirim, analiz ve reklam sunmak için güvenilir üçüncü taraf hizmetlerini kullanıyoruz. Bu hizmetler cihazınızı tanımlamak için bilgi toplayabilir:</p>
-            <ul>
-                <li><strong>Google AdMob:</strong> İlgi alanlarınıza uygun kişiselleştirilmiş reklamlar sunmak için cihaz tanımlayıcılarını (IDFA) kullanır.</li>
-                <li><strong>Firebase (Google):</strong> Anlık Bildirimleri (Push Notifications) iletmek ve uygulama hatalarını izlemek için kullanılır.</li>
-                <li><strong>Google Gemini API:</strong> Kullanıcının seçtiği haber içeriğinin gerçek zamanlı yapay zeka analizi için kullanılır.</li>
-                <li><strong>WeatherAPI:</strong> Konumunuza bağlı olarak gerçek zamanlı hava durumu verilerini çekmek için kullanılır.</li>
-                <li><strong>CurrencyFreaks & FrankfurterAPI:</strong> Gerçek zamanlı finans ve piyasa verilerini çekmek için kullanılır.</li>
-            </ul>
+      <!-- TR CONTENT -->
+      <main class="content-main hidden" id="content-tr">
+        <p>
+          <strong>Scope: AI Analyst</strong> uygulamasına hoş geldiniz. Gizliliğinize saygı duyuyor
+          ve kişisel verilerinizi korumayı taahhüt ediyoruz. Bu gizlilik politikası, mobil uygulamamızı
+          kullandığınızda bilgilerinizi nasıl topladığımızı ve kullandığımızı açıklar.
+        </p>
 
-            <h2>3. İzinleriniz</h2>
-            <ul>
-                <li><strong>Konum:</strong> Hava durumu özelliği için gereklidir. Cihaz ayarlarından istediğiniz zaman açıp kapatabilirsiniz.</li>
-                <li><strong>Takip İzni (ATT):</strong> Reklam amaçlı olarak sizi diğer uygulamalar ve web sitelerinde takip etmek için izin isteriz. Bu izni reddedebilirsiniz.</li>
-            </ul>
+        <h2 data-index="1">Topladığımız Bilgiler</h2>
 
-            <h2>4. Veri Güvenliği</h2>
-            <p>Uygulamayı kullanmak için bir hesap oluşturmanıza veya isim, e-posta gibi kişisel bilgilerinizi vermenize gerek yoktur. Uygulama ve üçüncü taraf API'ler (Gemini API dahil) arasındaki tüm iletişim HTTPS üzerinden şifrelenir.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-icon">📍</div>
+          <div>
+            <strong>Konum Verileri (CoreLocation)</strong>
+            <span>
+              Hava Durumu Paneli ve Widget aracılığıyla size kesin ve yerel hava durumu tahminleri sunmak için
+              <strong>yalnızca</strong> bu amaçla konum verilerinize (GPS koordinatları) erişim istiyoruz.
+              Bu veriler anlık olarak işlenir, sunucularımızda saklanmaz ve kimliğinizle ilişkilendirilmez.
+            </span>
+          </div>
+        </div>
 
-            <h2>5. İletişim</h2>
-            <p>Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
-            <p>📧 E-Posta: <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
-        </div>
+        <div class="highlight-box">
+          <div class="highlight-box-icon">🧠</div>
+          <div>
+            <strong>Yapay Zeka Analiz İçeriği</strong>
+            <span>
+              Yapay zeka analizi için bir haber kategorisi seçtiğinizde, uygulama o kategorideki
+              haber makalelerinin metin içeriğini anlık işlem için
+              <strong>Google Gemini API</strong>'ye gönderir. Bu metin, sizin için bir özet/analiz
+              oluşturmak amacıyla <strong>anlık olarak işlenir</strong>, sunucularımızda saklanmaz
+              ve Google tarafından da gerekli işlem süresinin ötesinde tutulmaz.
+            </span>
+          </div>
+        </div>
 
-        <footer>
-            &copy; 2025 Scope: AI Analyst. All rights reserved.
-        </footer>
-    </div>
+        <h3>1.1 Cihaz ve Kullanım Verileri</h3>
+        <p>
+          Uygulama kararlılığını artırmak için cihaz modeli, işletim sistemi sürümü, benzersiz
+          cihaz tanımlayıcıları (Reklam Kimliği) ve kullanım istatistikleri (Firebase Crashlytics
+          aracılığıyla uygulama çökmeleri gibi) hakkında kişisel olmayan bilgiler toplayabiliriz.
+        </p>
 
-    <script>
-        function setLanguage(lang) {
-            if (lang === 'tr') {
-                document.getElementById('content-en').classList.add('hidden');
-                document.getElementById('content-tr').classList.remove('hidden');
-                document.getElementById('btn-tr').classList.add('active');
-                document.getElementById('btn-en').classList.remove('active');
-                document.title = "Gizlilik Politikası - Scope: AI Analyst";
-            } else {
-                document.getElementById('content-tr').classList.add('hidden');
-                document.getElementById('content-en').classList.remove('hidden');
-                document.getElementById('btn-en').classList.add('active');
-                document.getElementById('btn-tr').classList.remove('active');
-                document.title = "Privacy Policy - Scope: AI Analyst";
-            }
-        }
+        <h2 data-index="2">Üçüncü Taraf Hizmetleri</h2>
+        <p>
+          İçerik, bildirim, analiz ve reklam sunmak için güvenilir üçüncü taraf hizmetlerini
+          kullanıyoruz. Bu hizmetler cihazınızı tanımlamak için bilgi toplayabilir:
+        </p>
+        <ul>
+          <li>
+            <strong>Google AdMob:</strong> İlgi alanlarınıza uygun kişiselleştirilmiş reklamlar sunmak
+            için cihaz tanımlayıcılarını (IDFA) kullanır.
+          </li>
+          <li>
+            <strong>Firebase (Google):</strong> Anlık Bildirimleri (Push Notifications) iletmek ve
+            uygulama hatalarını izlemek için kullanılır.
+          </li>
+          <li>
+            <strong>Google Gemini API:</strong> Kullanıcının seçtiği haber içeriğinin gerçek zamanlı
+            yapay zeka analizi için kullanılır.
+          </li>
+          <li>
+            <strong>WeatherAPI:</strong> Konumunuza bağlı olarak gerçek zamanlı hava durumu verilerini
+            çekmek için kullanılır.
+          </li>
+          <li>
+            <strong>CurrencyFreaks &amp; FrankfurterAPI:</strong> Gerçek zamanlı finans ve piyasa
+            verilerini çekmek için kullanılır.
+          </li>
+        </ul>
 
-        // Otomatik Dil Algılama
-        var userLang = navigator.language || navigator.userLanguage; 
-        if (userLang.startsWith('tr')) {
-            setLanguage('tr');
-        } else {
-            setLanguage('en');
-        }
-    </script>
+        <h2 data-index="3">İzinleriniz</h2>
+        <ul>
+          <li>
+            <strong>Konum:</strong> Hava durumu özelliği için gereklidir. Cihaz ayarlarından
+            istediğiniz zaman açıp kapatabilirsiniz.
+          </li>
+          <li>
+            <strong>Takip İzni (ATT):</strong> Reklam amaçlı olarak sizi diğer uygulamalar ve
+            web sitelerinde takip etmek için izin isteriz. Bu izni reddedebilirsiniz.
+          </li>
+        </ul>
+
+        <h2 data-index="4">Veri Güvenliği</h2>
+        <p>
+          Uygulamayı kullanmak için bir hesap oluşturmanıza veya isim, e-posta gibi kişisel
+          bilgilerinizi vermenize gerek yoktur. Uygulama ve üçüncü taraf API'ler
+          (Gemini API dahil) arasındaki tüm iletişim HTTPS üzerinden şifrelenir.
+        </p>
+
+        <h2 data-index="5">İletişim</h2>
+        <p>
+          Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bizimle iletişime geçin:
+        </p>
+        <p>
+          📧 E-Posta:
+          <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a>
+        </p>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-title">Summary</div>
+          <ul class="sidebar-list">
+            <li><span class="sidebar-bullet"></span><span>No user account or login required</span></li>
+            <li><span class="sidebar-bullet"></span><span>Location used only for local weather</span></li>
+            <li><span class="sidebar-bullet"></span><span>News text sent transiently to Gemini API</span></li>
+            <li><span class="sidebar-bullet"></span><span>Analytics &amp; ads via Google services</span></li>
+            <li><span class="sidebar-bullet"></span><span>All traffic encrypted over HTTPS</span></li>
+          </ul>
+          <div class="sidebar-note">
+            This summary is provided for convenience only.
+            Please read the full Privacy Policy before using the app.
+          </div>
+
+          <div class="sidebar-contact">
+            <p><strong>Need support?</strong></p>
+            <p>📧 <a href="mailto:gundogannsami@gmail.com">gundogannsami@gmail.com</a></p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      &copy; 2025 Scope: AI Analyst. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      var enContent = document.getElementById('content-en');
+      var trContent = document.getElementById('content-tr');
+      var btnEn = document.getElementById('btn-en');
+      var btnTr = document.getElementById('btn-tr');
+      var subtitle = document.getElementById('hero-subtitle');
+      var meta = document.getElementById('hero-meta');
+      var badgeNote = document.getElementById('badge-note');
+
+      if (lang === 'tr') {
+        enContent.classList.add('hidden');
+        trContent.classList.remove('hidden');
+        btnTr.classList.add('active');
+        btnEn.classList.remove('active');
+
+        document.title = "Gizlilik Politikası - Scope: AI Analyst";
+        subtitle.textContent =
+          "Verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında bilgi edinin.";
+        meta.innerHTML =
+          '<span>Son Güncelleme: 9 Aralık 2025</span>' +
+          '<span class="hero-meta-divider"></span>' +
+          '<span>Scope: AI Analyst mobil uygulaması için geçerlidir</span>' +
+          '<span class="hero-meta-divider"></span>' +
+          '<span class="hero-pill">' +
+          '<span class="hero-pill-dot"></span>' +
+          '<span>Hesap gerektirmez • Yapay zekâ destekli içgörüler</span>' +
+          '</span>';
+        badgeNote.innerHTML =
+          '<span class="badge-dot"></span>' +
+          '<span>Arayüz dili otomatik olarak seçildi</span>';
+      } else {
+        trContent.classList.add('hidden');
+        enContent.classList.remove('hidden');
+        btnEn.classList.add('active');
+        btnTr.classList.remove('active');
+
+        document.title = "Privacy Policy - Scope: AI Analyst";
+        subtitle.textContent =
+          "Learn how we collect, use, and protect your data.";
+        meta.innerHTML =
+          '<span>Last Updated: December 9, 2025</span>' +
+          '<span class="hero-meta-divider"></span>' +
+          '<span>Applies to the Scope: AI Analyst mobile app</span>' +
+          '<span class="hero-meta-divider"></span>' +
+          '<span class="hero-pill">' +
+          '<span class="hero-pill-dot"></span>' +
+          '<span>No account required • AI-powered insights</span>' +
+          '</span>';
+        badgeNote.innerHTML =
+          '<span class="badge-dot"></span>' +
+          '<span>Interface language is selected automatically</span>';
+      }
+    }
+
+    // Auto language selection on load
+    (function () {
+      var userLang = navigator.language || navigator.userLanguage || '';
+      if (userLang.toLowerCase().startsWith('tr')) {
+        setLanguage('tr');
+      } else {
+        setLanguage('en');
+      }
+    })();
+  </script>
 
 </body>
 </html>
